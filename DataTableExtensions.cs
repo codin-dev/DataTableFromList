@@ -12,22 +12,6 @@ namespace DataTableFromList;
 
 public static class DataTableExtensions
 {
-    // private static readonly Func<Student, object[]> StudentToItemArray;
-    // private static readonly List<string> StudentFieldNames;
-
-    // static DataTableExtensions()
-    // {
-
-
-    //     var properties = typeof(Student).GetProperties(BindingFlags.Public | BindingFlags.Instance);
-    //     var parameterExpression = Expression.Parameter(typeof(Student), "s");
-    //     var newArrayExpression = Expression.NewArrayInit(
-    //         typeof(object),
-    //         properties.Select(p => Expression.Convert(Expression.Property(parameterExpression, p), typeof(object))).ToArray()
-    //     );
-    //     StudentToItemArray = Expression.Lambda<Func<Student, object[]>>(newArrayExpression, parameterExpression).Compile();
-    // }
-
     public static DataTable ToDataTableUsingManualInitialization(this List<Student> students)
     {
         var table = new DataTable(nameof(Student));
